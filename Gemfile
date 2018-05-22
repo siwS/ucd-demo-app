@@ -27,6 +27,8 @@ gem 'sdoc',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'console_access_check', :git => 'https://github.com/siwS/rails-console-access-check'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
