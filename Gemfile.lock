@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/siwS/rails-console-access-check
-  revision: 6e8422a05ec2b0d60a014801b46ea624c9f11fb3
+  revision: 93b7b9661467e597894491a4d66da04761c328db
   specs:
-    console_access_check (0.0.1)
+    console_access_check (0.0.2)
       actionpack (>= 2.3)
       activerecord (>= 2.3)
 
@@ -165,7 +165,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  console_access_check!
+  console_access_check (~> 0.0.2)!
   jbuilder
   jquery-rails
   pg (~> 0.18)
