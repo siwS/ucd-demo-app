@@ -21,8 +21,8 @@ module RubyGettingStarted
     # config.i18n.default_locale = :de
 
     ConsoleAccessCheck.configure do |config|
-      config.sensitive_tables = ["users"]
       config.raise_error = true
+      config.sensitive_tables = ["users"]
     end
   end
 end
