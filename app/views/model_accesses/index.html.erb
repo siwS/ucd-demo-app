@@ -1,0 +1,28 @@
+<div class="container">
+<h1>Sensitive Models Accessed</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username (Unix Account)</th>
+      <th>Model</th>
+      <th>Time of Access</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accesses.each do |access| %>
+      <tr>
+        <td><%= access.username %></td>
+        <td><%= access.model %></td>
+        <td><%= access.time %></td>
+        <td><%= link_to 'Show', access %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+</div>

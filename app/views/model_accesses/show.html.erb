@@ -1,0 +1,24 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @access.username %>
+</p>
+<br>
+<p>
+  <strong>Model Accessed:</strong>
+  <%= @access.model %>
+</p>
+
+<p>
+  <strong>Time of Access:</strong>
+  <%= @access.time %>
+</p>
+
+<br>
+
+<%= link_to 'Back', model_accesses_path %>
+
+</div>
