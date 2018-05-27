@@ -23,6 +23,8 @@ module RubyGettingStarted
 
   ConsoleAccessCheck.configure do |config|
     config.raise_error = true
-    config.sensitive_tables = ["users"]
+    config.sensitive_tables_model = "SensitiveModel"
+    config.user_permissions_model = "UserPermission"
+    config.use_group_access = false
   end
 end

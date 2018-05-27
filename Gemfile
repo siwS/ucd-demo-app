@@ -28,7 +28,7 @@ gem 'sdoc',          group: :doc
 gem 'spring',        group: :development
 
 # Console Access Check gem
-gem 'console_access_check', :git => 'https://github.com/siwS/rails-console-access-check'
+gem 'console_access_check'#, :git => 'https://github.com/siwS/rails-console-access-check'
 gem 'marginalia'
 gem 'pry'
 
