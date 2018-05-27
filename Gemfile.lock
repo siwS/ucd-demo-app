@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/siwS/rails-console-access-check
-  revision: bbd1e9229c5bb37e8c96b1b3564168ab63599cb7
-  specs:
-    console_access_check (0.0.2)
-      actionpack (>= 2.3)
-      activerecord (>= 2.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,6 +46,9 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    console_access_check (0.0.2)
+      actionpack (>= 2.3)
+      activerecord (>= 2.3)
     crass (1.0.4)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -169,7 +164,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  console_access_check!
+  console_access_check
   jbuilder
   jquery-rails
   marginalia

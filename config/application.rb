@@ -26,5 +26,7 @@ module RubyGettingStarted
     config.sensitive_tables_model = "SensitiveModel"
     config.user_permissions_model = "UserPermission"
     config.use_group_access = false
+    config.log_to_db = true
+    config.logging_table = "ModelAccess"
   end
 end
