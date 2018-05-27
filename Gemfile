@@ -5,7 +5,7 @@ ruby   '2.4.4'
 gem 'rails', '4.2.10'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.21.0'
-
+gem 'unicorn'
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails'
