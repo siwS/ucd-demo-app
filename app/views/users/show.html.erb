@@ -17,6 +17,13 @@
   <%= @user.phone_number %>
 </p>
 
+<p>
+  <strong>Address:</strong>
+  <%= @address.address %>,
+  <%= @address.code %>,
+  <%= @address.country %>
+</p>
+
 <%= link_to 'Back', users_path %>
 
 </div>
