@@ -185,5 +185,8 @@ DEPENDENCIES
   uglifier
   unicorn
 
+RUBY VERSION
+   ruby 2.4.4p296
+
 BUNDLED WITH
    1.16.2

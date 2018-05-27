@@ -18,10 +18,12 @@
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @address.address %>,
-  <%= @address.code %>,
-  <%= @address.country %>
+  <% if @address %>
+    <strong>Address:</strong>
+    <%= @address.address %>,
+    <%= @address.code %>,
+    <%= @address.country %>
+  <% end %>
 </p>
 
 <%= link_to 'Back', users_path %>
