@@ -3,10 +3,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User who placed the order:</strong>
-  <%= @order.user.name %>
+  <strong>Customer:</strong>
+  <%= @order.user.name %> <%= @order.user.surname %>
 </p>
-
+<br>
 <p>
   <strong>Product Code:</strong>
   <%= @order.product.product_code %>
@@ -27,6 +27,13 @@
   <%= @order.total_price %>
 </p>
 
+<br>
+
+
+<p>
+  <strong>Order placed:</strong>
+  <%= @order.created_at %>
+</p>
 <%= link_to 'Back', orders_path %>
 
 </div>
