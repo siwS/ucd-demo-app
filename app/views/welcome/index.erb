@@ -1,53 +1,51 @@
 <div class="jumbotron text-center">
   <div class="container">
     <a href="/" class="lang-logo">
-      <img src="<%= asset_path('lang-logo.png') %>">
+      <img src="<%= asset_path('ucd.png') %>">
     </a>
-    <h1>Simple App for Thesis Presentation</h1>
-    <p>This is a sample Ruby application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-ruby"><span class="glyphicon glyphicon-flash"></span> Getting Started with Ruby</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/ruby-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+    <h1>Computer Forensics & Digital Investigations</h1>
+    <p>This is a sample Ruby application deployed to demonstrate the usability of the Rails-Console-Access-Check gem.</p>
+    <a type="button" class="btn btn-lg btn-default" href="https://docs.google.com/document/d/1cUYy-W60g68xp6OLkyP4bplYbk6-NVYOigBEBkzrH0o/edit?usp=sharing"><span class="glyphicon glyphicon-flash"></span> My final project</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/siwS/rails-console-access-check"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
   </div>
 </div>
+
+
+
 <div class="container">
   <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-ruby" class="alert-link">Getting Started with Ruby on Heroku</a> tutorial.
+    Disclaimer: This is a demo application and is not intended to be deployed in any purposeful way
   </div>
   <hr>
-  <div class="row">
+  <div class="row" style="padding:40px;">
     <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
+      <h3><span class="glyphicon glyphicon-info-sign"></span> How it works</h3>
       <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/ruby-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/ruby-getting-started/blob/master/Gemfile">Gemfile</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
+        <li>This is the admin page of a web application where the inventory department can add products and view the orders</li>
+        <li>By adding the Rails-Console-Access-Check gem the person who deploys the app can define access on the production console level</li>
+        <li>Access rules around the sensitive models can be defined through the gem configuration</li>
+        <li>Then just deploy your app!</li>
       </ul>
     </div>
     <div class="col-md-6">
       <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+      <p>The gem is already open sourced on Github and tested for PostgreSQL, MySQL and MongoDB</p>
+      <p>Next steps include</p>
       <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
+        <li>Adding support for more datastores</li>
+        <li>Adding tests to be production-ready</li>
+        <li>Provide alternative ways of implementing access check</li>
+        <li>To contribute:</li>
         <ul>
-          <li><code>git clone https://github.com/heroku/ruby-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd ruby-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-ruby#push-local-changes">deploy changes</a> to Heroku</li>
+          <li><code>git clone git@github.com:siwS/rails-console-access-check.git</code> - this will create a local copy of the source code for the gem</li>
+          <li><code>cd console_access_check</code> - change directory into the local source code repository</li>
+          <li><code>rake install & gem install pkg/console_access_check-0.0.2.gem</code> - associate the Heroku app with the repository</li>
         </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-ruby-and-rails">Deploying Ruby Apps on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
       </ul>
     </div>
   </div> <!-- row -->
    <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+    Built by Sofia Tzima (<a href="https://github.com/siwS" class="lang-logo">siwS</a>) based on
+     <a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Heroku Getting started with Ruby guide</a>
   </div>
 </div>
