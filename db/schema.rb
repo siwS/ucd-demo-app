@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180526221557) do
+ActiveRecord::Schema.define(version: 20180527091056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,11 +22,43 @@ ActiveRecord::Schema.define(version: 20180526221557) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.integer  "total_price", null: false
+    t.integer  "quantity",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "orders", ["product_id"], name: "index_orders_on_product_id", using: :btree
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
+
+  create_table "products", force: :cascade do |t|
+    t.string   "product_description", limit: 50, null: false
+    t.string   "product_code",        limit: 50, null: false
+    t.integer  "price",                          null: false
+    t.integer  "availability",                   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sensitive_models", force: :cascade do |t|
     t.string   "name",       limit: 50, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_addresses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "address"
+    t.string   "country"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_addresses", ["user_id"], name: "index_user_addresses_on_user_id", using: :btree
 
   create_table "user_permissions", force: :cascade do |t|
     t.string  "username",             limit: 50,                 null: false
