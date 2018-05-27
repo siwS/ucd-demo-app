@@ -1,0 +1,28 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.product_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.product_description %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @product.availability %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+</div>
