@@ -21,12 +21,6 @@ module RubyGettingStarted
     # config.i18n.default_locale = :de
   end
 
-        if defined?(Rails::Console)
-          ActiveSupport.on_load :active_record do
-            ConsoleAccessCheck::Railtie.insert_into_stores
-          end
-        end
-
   ConsoleAccessCheck.configure do |config|
     config.raise_error = true
     config.sensitive_tables_model = "SensitiveModel"
