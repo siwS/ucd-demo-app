@@ -54,7 +54,7 @@ class AdminController < ApplicationController
   end
 
   def all_users
-    @users = Etc.getgrnam('ubuntu').mem 
+    @users = Etc.getgrnam('ubuntu').mem
   end
 
   def user_permissions
