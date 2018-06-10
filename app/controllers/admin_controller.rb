@@ -50,7 +50,10 @@ class AdminController < ApplicationController
   end
 
   def remove_model?(model)
-    model.to_s == "ActiveRecord::SchemaMigration" || model.to_s == "ModelAccess" || model.to_s == "SensitiveModel"
+    model.to_s == "ActiveRecord::SchemaMigration" ||
+        model.to_s == "ModelAccess" ||
+        model.to_s == "SensitiveModel" ||
+        model.to_s == "UserPermission"
   end
 
   def all_users
