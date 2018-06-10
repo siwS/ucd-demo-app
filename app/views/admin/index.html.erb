@@ -1,0 +1,61 @@
+<div class="container">
+<h1>Models Permissions</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Users</th>
+      <th>Read</th>
+      <th>Write</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <%= form_tag(:controller => "admin", :action => "create", :method => "post", :class => "nifty_form") do %>
+
+    <% @models_str.each do |model| %>
+        <% @users.each do |user| %>
+          <tr>
+          <td><%= model %></td>
+          <td><%=  user %></td>
+
+          <% if @sensitive_models.include?(Object.const_get(model).table_name) %>
+            <td>
+              <%= check_box_tag("access_r_"+model+"_"+user, model+"_"+user,
+                  @user_permissions.where(sensitive_model_name: Object.const_get(model).table_name, username:user).present? &&
+                  @user_permissions.where(sensitive_model_name: Object.const_get(model).table_name, username:user)[0].allow_read
+                  ) %>
+            </td>
+          <% else %>
+            <td></td>
+          <% end %>
+
+            <% if @sensitive_models.include?(Object.const_get(model).table_name) %>
+              <td>
+                <%= check_box_tag("access_w_"+model+"_"+user, model+"_"+user,
+                                  @user_permissions.where(sensitive_model_name: Object.const_get(model).table_name, username:user).present? &&
+                                      @user_permissions.where(sensitive_model_name: Object.const_get(model).table_name, username:user)[0].allow_write
+                    ) %>
+              </td>
+            <% else %>
+              <td></td>
+            <% end %>
+
+          </tr>
+        <% end %>
+    <% end %>
+
+    <%= submit_tag("Save") %>
+  <% end %>
+
+  </tbody>
+
+
+
+</table>
+
+</div>
